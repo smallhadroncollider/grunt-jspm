@@ -1,0 +1,31 @@
+{
+  "name": "grunt-jspm",
+  "dependencies": {
+    "each-async": "^1.0.0",
+    "jspm": "^0.16.15"
+  },
+  "description": "JSPM Bundle",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13"
+  },
+  "directories": {},
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "tasks"
+  ],
+  "keywords": [
+    "build",
+    "bundle",
+    "jspm"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "smallhadroncollider",
+      "email": "mark@smallhadroncollider.com"
+    }
+  ]
+}
