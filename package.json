@@ -1,5 +1,6 @@
 {
   "name": "grunt-jspm",
+  "version": "0.1.1",
   "dependencies": {
     "each-async": "^1.0.0",
     "jspm": "^0.16.15"
@@ -9,7 +10,10 @@
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13"
   },
-  "directories": {},
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/smallhadroncollider/grunt-jspm.git"
+  },
   "engines": {
     "node": ">=0.10.0"
   },
