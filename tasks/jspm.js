@@ -61,16 +61,19 @@ module.exports = function (grunt) {
         if (warn) {
             const msg = grunt.log.wordlist(['Notice: ' + commonBundle.dest + ' will not be written since only 1 bundle was provided'], {color: 'yellow'})
             grunt.log.writeln(msg);
+            bundles[0] = bundleTree(commonTree, files[0].dest, options);
         }
         else {
+            // Common bundle
             bundles[0] = bundleTree(commonTree, commonBundle.dest, commonBundle.options);
+            // all others
+            traces.forEach((trace, index) => {
+                const subtractedTree = builder.subtractTrees(trace, commonTree);
+                const file = files[index];
+                const bundle = bundleTree(subtractedTree, file.dest, options);
+                bundles.push(bundle);
+            });
         }
-        traces.forEach((trace, index) => {
-            const subtractedTree = builder.subtractTrees(trace, commonTree);
-            const file = files[index];
-            const bundle = bundleTree(subtractedTree, file.dest, options);
-            bundles.push(bundle);
-        });
         return Promise.all(bundles);
     };
 
