@@ -133,7 +133,7 @@ Default: `true`
 
 Use mangling with minification, defaults to true
 
-### `sourceMaps'
+### `sourceMaps`
 
 Default: `false`
 
