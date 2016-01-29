@@ -1,5 +1,7 @@
 # grunt-jspm
 
+For more advanced JSPM support see: [https://github.com/justinwilaby/grunt-jspm-builder](https://github.com/justinwilaby/grunt-jspm-builder )
+
 ## Install
 
 ```
