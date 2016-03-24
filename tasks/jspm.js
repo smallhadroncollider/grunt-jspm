@@ -22,7 +22,8 @@ module.exports = function (grunt) {
         var options = this.options({
             sfx: true,
             mangle: true,
-            minify: true
+            minify: true,
+            inject: false
         });
 
         var bundle = options.sfx ? "bundleSFX" : "bundle";
